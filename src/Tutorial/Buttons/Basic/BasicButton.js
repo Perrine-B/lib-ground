@@ -5,9 +5,7 @@ import React from "react";
  */
 
 
-const BasicButton = () => {
-    return (
-    <button>It works !</button>)
-} 
+const BasicButton = () => <button>It works !</button>
+
 
 export default (BasicButton);
