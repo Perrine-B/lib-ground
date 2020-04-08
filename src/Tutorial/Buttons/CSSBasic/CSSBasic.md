@@ -6,7 +6,7 @@ Try to remove the color property on the button, now, it is red. Default props wi
 
 
 ##### SCSS time 😻😎
-SCSS is not included with CRA. If we want to use it, we'll have to install it and to make it interact with styleguidist. If you don't get it, see the [Installing SCSS without going mad]() section
+SCSS is not included with CRA. If we want to use it, we'll have to install it and to make it interact with styleguidist. If you don't get it, see the [Installing SCSS without going mad](#/Tutorial/Install%20SCSS%20without%20going%20mad) section
 
 
 ```jsx                       

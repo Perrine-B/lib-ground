@@ -34,7 +34,7 @@ module.exports = {
         },
         {
           name: "Install SCSS without going mad",
-          content: "src/docs/SASS.md",
+          content: "src/docs/SASS.md"
         },
         {
           name: "Component crafting",
