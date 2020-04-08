@@ -1,6 +1,7 @@
 *All this text is from the BasicButton.md file [why saying that ? See you next comp']* 🚀 
 
 -----
+
 ##### Step 1 : JS file -> Do your component 
 
 Here, the code in our js file will be the simplier React component ever : 

@@ -1,5 +1,23 @@
 module.exports = {
-  assetsDir: 'src/assets',
+  webpackConfig: {
+    module: {
+      rules: [
+        // Babel loader will use your project’s babel.config.js
+        {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          loader: "babel-loader",
+        },
+        // Other loaders that are needed for your components
+        {
+          test: /\.scss$/,
+          use: ["style-loader", "css-loader"],
+        },
+      ],
+    },
+  },
+  require: ["./src/styles/index.scss"],
+  assetsDir: "src/assets",
   pagePerSection: true,
   sections: [
     {
@@ -11,8 +29,12 @@ module.exports = {
       content: "src/docs/tutorial.md",
       sections: [
         {
-          name: 'Structure your library',
-          content: 'src/docs/libraryStructure.md'
+          name: "Structure your library",
+          content: "src/docs/libraryStructure.md",
+        },
+        {
+          name: "Install SCSS without going mad",
+          content: "src/docs/SASS.md",
         },
         {
           name: "Component crafting",
@@ -24,8 +46,8 @@ module.exports = {
               content: "src/docs/buttons.md",
             },
             {
-              name: 'More fancy stuff'
-            }
+              name: "More fancy stuff",
+            },
           ],
         },
       ],
@@ -34,11 +56,7 @@ module.exports = {
     {
       name: "Library",
       content: "src/docs/components.md",
-      sections: [
-        {
-         
-        },
-      ],
+      sections: [{}],
       sectionDepth: 1,
     },
   ],

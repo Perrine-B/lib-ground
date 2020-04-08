@@ -1,3 +1,3 @@
 Here is a personal library for use in projects as well as for experimentation
 
-![test](./propval.png)
+![test](./hello.gif)

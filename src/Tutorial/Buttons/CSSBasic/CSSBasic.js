@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 /**
- * Hello ! There I'm speaking from js file comments. It is useful when you will have some things to explain and you want it to appear on the top on the section, especially when we gonna add and document some props and methods (Damned ! It's happening now !) related to our components.
- * Ok, let's do something a little more realistic. 
- * @visibleName The Basic button (for real)
+ * Until now, I used CSS in a messy way just for exemple. Now, we gonna try to do something a little more clean. Objective: make a unique button which can have several sizes.
+ * 
+ * @visibleName Fashion SCSS Button
  */
 
-const ColorBasic = (props) => {
+const CSSButton = (props) => {
 
 /**
  * what you want the button to do.
@@ -25,7 +25,8 @@ const ColorBasic = (props) => {
     border: '1px solid', 
     borderColor: `${props.color}`, 
     borderRadius: '.5em', 
-    color: 'white'}}
+    color: 'white',
+    size: '14em'}}
     
     onClick={() => doSmthg()}>
         {props.text}
@@ -35,7 +36,7 @@ const ColorBasic = (props) => {
 
 
 
-ColorBasic.propTypes = {
+CSSButton.propTypes = {
     /** Text content belonging to the button */
     text: PropTypes.string,
   
@@ -43,8 +44,17 @@ ColorBasic.propTypes = {
     color: PropTypes.string,
   
     /** What happened when you click */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+
+    /** The size or your button */
+    size: PropTypes.string
 };
 
+CSSButton.defaultProps = {
+    text: 'This is me : button !',
+    color: 'red',
+    size: 'M'
+}
 
-export default (ColorBasic);
+
+export default (CSSButton);

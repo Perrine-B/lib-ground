@@ -5,3 +5,7 @@ Then, I make a new folder that focuses on my new componant and will be entitled 
 - a markdown file
 
 OK, ready to start !
+
+![start](/start.gif)
+
+-----
