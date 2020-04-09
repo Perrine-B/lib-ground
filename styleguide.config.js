@@ -11,12 +11,34 @@ module.exports = {
         // Other loaders that are needed for your components
         {
           test: /\.scss$/,
-          use: ["style-loader", "css-loader"],
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 1,
+                modules: true,
+              },
+            },
+          ],
+        },
+        {
+          test: /\.css$/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 1,
+                modules: true,
+              },
+            },
+          ],
         },
       ],
     },
   },
-  require: ["./src/styles/index.scss"],
+
   assetsDir: "src/assets",
   pagePerSection: true,
   sections: [
@@ -33,8 +55,8 @@ module.exports = {
           content: "src/docs/libraryStructure.md",
         },
         {
-          name: "Install SCSS without going mad",
-          content: "src/docs/SASS.md"
+          name: "Install SCSS modules without going mad",
+          content: "src/docs/SASS.md",
         },
         {
           name: "Component crafting",

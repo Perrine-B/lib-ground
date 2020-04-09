@@ -1,7 +1,7 @@
 ![crying_picture](crying.gif)
 
 -----
-*Me, trying to make SCSS working on styleguidist for the first time*
+*Me, trying to make SCSS modules working on styleguidist for the first time*
 
 -----
 
@@ -57,4 +57,38 @@
 - restart your server
 
 
-That's all set 💥
+That's all set ?? I thought so but ... NO
+
+With these settings, styleguidist will build but, if you try to create a new `.scss` file linked to a component, it won't work.. at all (or if it worked, you are a lucky one.). Actually, our configuration lacks of a thing : activate modules. So, go back to `styleguide.config.js` and replace the area dealing with scss with these rules : 
+
+``` xml
+   {
+          test: /\.scss$/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 1,
+                modules: true,
+              },
+            },
+          ],
+        },
+        {
+          test: /\.css$/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 1,
+                modules: true,
+              },
+            },
+          ],
+        },
+
+``` 
+
+NOW thanks to https://blog.jakoblind.no/css-modules-webpack/, we can play o/

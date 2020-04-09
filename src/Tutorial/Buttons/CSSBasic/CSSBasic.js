@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import style from './CSSButton.module.scss';
+
+
 
 /**
  * Until now, I used CSS in a messy way just for exemple. Now, we gonna try to do something a little more clean. Objective: make a unique button which can have several sizes.
@@ -8,6 +11,7 @@ import PropTypes from 'prop-types';
  */
 
 const CSSButton = (props) => {
+console.log(style);
 
 /**
  * what you want the button to do.
@@ -18,15 +22,8 @@ const CSSButton = (props) => {
     }
 
     return (
-    <button 
-    style = 
-    {{backgroundColor: `${props.color}`, 
-    padding: '1em', 
-    border: '1px solid', 
-    borderColor: `${props.color}`, 
-    borderRadius: '.5em', 
-    color: 'white',
-    size: '14em'}}
+    <button className={style.btn}
+   
     
     onClick={() => doSmthg()}>
         {props.text}
