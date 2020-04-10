@@ -1,4 +1,5 @@
 module.exports = {
+  /******** Config */
   webpackConfig: {
     module: {
       rules: [
@@ -38,7 +39,25 @@ module.exports = {
       ],
     },
   },
+  /******** Styles */
 
+  title: "My first doc : make a React component library",
+  template: {
+    // Just for example : favicon: "https://assets-cdn.github.com/favicon.ico",
+    head: {
+      links: [
+        {
+          href: "https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap", rel: "stylesheet",
+        },
+        {
+          href: "https://fonts.googleapis.com/css?family=Dokdo|Sue+Ellen+Francisco|Walter+Turncoat&display=swap",
+          rel: "stylesheet",
+        },
+      ],
+    },
+  },
+
+  /******** Structure */
   assetsDir: "src/assets",
   pagePerSection: true,
   sections: [
